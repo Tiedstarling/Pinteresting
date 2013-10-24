@@ -10,14 +10,15 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="/">Pinteresting</a>
- 
+      
+      <%= link_to "Pinteresting", pins_path, :class => "brand" %>
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav">
         	<li><%= link_to "Home", root_path %></li>
         	<li><%= link_to "About", pages_about_path %></li>
+          <li><%= link_to "Pins", pins_path %></li>
         </ul>
         <ul class="nav pull-right">
           <% if user_signed_in? %>
